@@ -28,7 +28,7 @@ describe("Servers test (with setup and tear-down)", function() {
     expect(curTdList.length).toEqual(3); // 1 for server name, 1 for tip average, 1 for delete button
     expect(curTdList[0].innerText).toEqual('Alice'); // Check server name
     expect(curTdList[1].innerText).toEqual('$0.00'); // Check tip average, assuming no payments have been made
-    expect(curTdList[2].querySelector('button').innerText).toEqual('X'); // Check delete button
+    expect(curTdList[2].innerText).toEqual('X'); // Check delete button
   });
 
   afterEach(function() {

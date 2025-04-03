@@ -56,7 +56,7 @@ function appendPaymentTable(curPayment) {
   appendTd(newTr, '$' + curPayment.tipAmt);
   appendTd(newTr, curPayment.tipPercent + '%');
 
-  appendDeleteButton(newTr, 'payment'); // Add delete button for each payment row
+  appendDeleteBtn(newTr, 'payment'); // Add delete button for each payment row
 
   paymentTbody.append(newTr);
 }
@@ -65,7 +65,7 @@ function appendPaymentTable(curPayment) {
 function updateSummary() {
   let tipPercentAvg = sumPaymentTotal('tipPercent') / Object.keys(allPayments).length;
 
-  
+
   summaryTds[0].innerHTML = '$' + sumPaymentTotal('billAmt');
   summaryTds[1].innerHTML = '$' + sumPaymentTotal('tipAmt');
   summaryTds[2].innerHTML =  Math.round(tipPercentAvg) + '%';
