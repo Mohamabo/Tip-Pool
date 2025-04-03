@@ -38,6 +38,7 @@ function updateServerTable() {
 
     appendTd(newTr, curServer.serverName);
     appendTd(newTr, '$' + tipAverage.toFixed(2));
+    appendDeleteButton(newTr, 'server'); // Add delete button for each server row
 
     serverTbody.append(newTr);
   }
